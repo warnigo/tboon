@@ -3,7 +3,7 @@ import { type FC, Suspense } from "react"
 import { Spin } from "antd"
 import { Navigate, Outlet } from "react-router-dom"
 
-import { ProtectedLayout } from "@app/layouts"
+import { PublicLayout } from "@app/layouts"
 import { useAppSelector } from "@app/store"
 import { ROUTES } from "@shared/config"
 
@@ -15,10 +15,10 @@ export const PublicRoutes: FC = () => {
   }
 
   return (
-    <ProtectedLayout>
+    <PublicLayout>
       <Suspense fallback={<Spin />}>
         <Outlet />
       </Suspense>
-    </ProtectedLayout>
+    </PublicLayout>
   )
 }

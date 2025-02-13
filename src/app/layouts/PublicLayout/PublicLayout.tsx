@@ -1,5 +1,5 @@
 import { type FC, type PropsWithChildren } from "react"
 
-export const PublicProvider: FC<PropsWithChildren> = ({ children }) => (
+export const PublicLayout: FC<PropsWithChildren> = ({ children }) => (
   <div>{children}</div>
 )

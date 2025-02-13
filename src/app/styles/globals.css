@@ -1,3 +1,8 @@
+:root {
+  --primary: #c026d3;
+  --primary-secondary: #86198f;
+}
+
 *,
 *::before,
 *::after {

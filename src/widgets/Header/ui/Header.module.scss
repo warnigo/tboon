@@ -1,0 +1,51 @@
+.header {
+  font-size: 14px;
+  display: flex;
+  padding: 10px 30px;
+  position: sticky;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px #c0c0c0;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__right {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+
+    &-welcome {
+      border-right-width: 1.5px;
+      padding-right: 10px;
+      border-color: #bcbcbc;
+    }
+  }
+
+  &__button {
+    border-radius: 100%;
+    color: #000;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(219, 219, 219);
+    }
+  }
+}
+
+.modal {
+  &-text {
+    font-size: 24px;
+    color: #3b3f5c;
+  }
+}

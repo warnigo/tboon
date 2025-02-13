@@ -1,2 +1,2 @@
 export { ProtectedLayout } from "./ProtectedLayout/ProtectedLayout"
-export { PublicProvider } from "./PublicLayout/PublicLayout"
+export { PublicLayout } from "./PublicLayout/PublicLayout"
