@@ -1,0 +1,142 @@
+.home {
+  padding: 20px 30px;
+  background: #fff;
+
+  .ant-table {
+    .ant-table-thead {
+      tr > th {
+        background: #f8f9fa;
+        font-weight: 500;
+        color: #495057;
+        padding: 16px;
+        border-bottom: 1px solid #e9ecef;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .ant-table-tbody {
+      > tr {
+        &:hover > td {
+          background: #f8f9fa;
+        }
+
+        > td {
+          padding: 16px;
+          border-bottom: 1px solid #e9ecef;
+        }
+      }
+    }
+  }
+
+  .contract-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .contract-id {
+      color: #0d6efd;
+      cursor: pointer;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .contract-ref {
+      color: #6c757d;
+      font-size: 13px;
+    }
+  }
+
+  .contract-number {
+    .date {
+      color: #6c757d;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+  }
+
+  .partner-name {
+    font-weight: 500;
+
+    .tin {
+      color: #6c757d;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+  }
+
+  .amount-cell,
+  .difference-cell {
+    font-weight: 500;
+
+    .sub-amount {
+      color: #6c757d;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+  }
+
+  .status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+
+    &.pending {
+      background: #e7f1ff;
+      color: #0d6efd;
+    }
+
+    &.approved {
+      background: #d1e7dd;
+      color: #146c43;
+    }
+
+    &.rejected {
+      background: #f8d7da;
+      color: #dc3545;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+
+    .ant-btn {
+      height: 32px;
+      border-radius: 4px;
+      font-weight: 500;
+
+      &.confirm-btn {
+        background: #0d6efd;
+        border-color: #0d6efd;
+
+        &:hover {
+          background: #0b5ed7;
+          border-color: #0b5ed7;
+        }
+      }
+
+      &.reject-btn {
+        color: #dc3545;
+        border-color: #dc3545;
+
+        &:hover {
+          color: #fff;
+          background: #dc3545;
+          border-color: #dc3545;
+        }
+      }
+    }
+  }
+
+  .ant-checkbox-wrapper {
+    margin-inline-start: 8px;
+  }
+}
