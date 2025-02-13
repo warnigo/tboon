@@ -1,0 +1,33 @@
+.form {
+  width: 440px;
+
+  :global {
+    .ant-form-item-label > label {
+      color: #333;
+      font-weight: 500;
+    }
+
+    .ant-input-affix-wrapper {
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #e1e1e1;
+
+      &:hover,
+      &:focus {
+        border-color: #4169e1;
+      }
+    }
+
+    .ant-input {
+      font-size: 1rem;
+    }
+  }
+
+  &__icon {
+    color: #999;
+  }
+
+  &__checkbox {
+    color: #666;
+  }
+}
