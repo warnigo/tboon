@@ -1,48 +1,47 @@
-<div align="center">
-  <h1><samp>Task</samp></h1>
-  <samp>Showcasing my coding skills and projects with a sleek, modern design.<br /> Built using the latest web technologies to demonstrate my expertise and creativity</samp>
-</div>
-
 ## Stack technologies
 
 - [React](https://react.dev/learn) + [Typescript](https://www.typescriptlang.org/docs/)
-- [Antd](https://ant.design/) - Performant, flexible and extensible forms with for ui
+- [Redux](https://redux.js.org/) - Small, fast, and scalable bearbones state management solution
+- [Antd](https://ant.design/) - As ready-made UI components
 - [React Query](https://tanstack.com/query) - Automatically caches data from your queries, reducing the need for redundant network requests and improving application performance.
-- [SCSS](https://sass-lang.com/) - For styles
-- [Vite.js](https://Nextjs.org/) - framework for CSR
+- [scss](https://sass-lang.com/) - For styles
+- [Vitejs](https://Vitejs.org/) - framework for CSR
+
+> [!IMPORTANT]  
+> This code structure was created using FSD (Feature-Sliced Design). Please read the FSD documentation before making any changes. Define any CSS units such as px, rem, etc., in globals.css. React Query is used for API integration.
 
 ## Basic requirements for the project
 
 > [!NOTE]
-> Version Node +v20\*
+> Vesion Node +v20\*
 
 ## For Developers
 
-## Prerequisites
-
-- Node.js (v20+)
-- pnpm
-
-## Installation
-
 ```bash
-# Clone the repository
-git clone https://github.com/warnigo/tboon.git
-
-# Navigate to project directory
-cd tboon
-
-# Install dependencies
-pnpm install
-
-# Copy environment template
-cp .env.example .env.development
-
-# Run development server
-pnpm dev
+npm i
+# and
+npm run dev
+# or
+yarn install
+# and
+yarn dev
 ```
 
-Run the project at [localhost:3000](http://localhost:3000)
+Run the project at [localhost:3000](http://localhost:5173)
+
+### To launch the project in the production environment, run the command:
+
+```bash
+npm i
+npm run build
+npm run dev
+# or
+yarn install
+yarn build
+yarn dev
+```
+
+run the project at [localhost:3000](http://localhost:5173)
 
 > [!NOTE]
 > You need to create `.env.development` following the example of `.env.example` so that all parameters are
@@ -51,6 +50,7 @@ Run the project at [localhost:3000](http://localhost:3000)
 
 ```
 Root
+├── .hasky - Prehooks for commits
 ├── public - All public files that will be included in the production build
 ├── src - Development folder
 │   │
@@ -71,19 +71,71 @@ Root
 └── tsconfig.json - Configuration for TypeScript
 ```
 
-## Deployment
+#### ☝️ - IMPORTANT:
+
+1. The names of folders and files are always in notation (kebab-case), except for components that are both folders and files in notation (PascalCase)
+2. From the component, everything always imports from the index.ts file
+3. Styles are always in tailwindcss
+4. Interfaces in types.ts
+5. constants in constants.tsx
+
+# GIT
+
+## Push to git
+
+### Created branch
 
 ```bash
-# Build for production
-pnpm build
-
-# Preview production build
-pnpm start
+git checkout -b feat/TASK_ID
 ```
 
-## Creator
+### Switch to another branch
 
-Developed by **Warnigo**
+```bash
+git switch feat/TASK_ID
+```
 
-- Website: [warnigo.uz](https://www.warnigo.uz)
-- Email: thewarnigo@gmail.com
+### Push to git branch
+
+> [!WARNING]
+> Check that the branch is in the your task branch
+
+```bash
+git add .
+git commit -m "YOUR_COMMENT"
+git push origin feat/TASK_ID
+```
+
+### Get Pull from the main code (from dev branch)
+
+```bash
+git pull origin dev
+```
+
+#### Get Pull from the main code (from dev branch) rebase
+
+> [!WARNING]
+> Ff git pull asks for rebase, you can get git pull from **dev** branch with this command
+
+```bash
+git pull origin dev  --no-rebase
+# or
+git pull origin dev  --rebase
+```
+
+> [!CAUTION]
+> Inform the **TEAM LEAD** that every time a pull PR is released on github, the code will be reviewed. And if there is a task code review, it goes to the **dev** branch and then moves to the next task!
+
+## Code Review
+
+    1) If the code is not ready, then mark your PR as “Draft” with the “Mark as draft” button
+    2) Considers Architectural, Structural and other agreements on the design of PR to be critical and for this is not passed further than PR
+    3) The remaining comments are purely advisory in nature and are not a blocker for PR
+    4) Any controversial issue is discussed by the team and if there is no violation of points 1-2, then this dispute is not blocked!
+
+## ☝️ - IMPORTANT:
+
+> - To type everything and anything that is possible is not to use ANY!
+> - any enemy! - always discuss exceptions with the team!
+> - avoid console.log if possible, in extreme cases console.error console.warn
+> - mutate values ​​outside the mobx store (use exclusively actions from the mobx store for such things.)
